@@ -30,9 +30,9 @@ export default class App extends React.Component {
     return (
       this.state.timeSinceLastActive
         ? <h1>{this.state.timeSinceLastActive}</h1>
-        : <form onSubmit={this.getTime}>
-            <input type="text" name="username" placeholder="GitHub Username" value={this.state.username} onChange={this.handleInputChange}/>
-            <input type="submit" value="Submit"/>
+        : <form className="input-form" onSubmit={this.getTime}>
+            <input className="input-box" type="text" name="username" placeholder="GitHub Username" value={this.state.username} onChange={this.handleInputChange} required/>
+            <input className="submit-btn" type="submit" value="Search"/>
           </form>
     );
   }

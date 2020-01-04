@@ -13,7 +13,29 @@ body {
 .container {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   justify-content: space-evenly;
   height: 100vh;
   background: none;
+}
+
+.input-box, .submit-btn {
+  color: white;
+  background-color: rgb(43, 43, 43);
+  border: 4px solid black;
+  border-radius: 8px;
+  outline: none;
+  font-size: 2rem;
+}
+
+.input-box {
+  transition: all 0.3s linear;
+}
+
+.submit-btn {
+  margin-left: 4px;
+}
+
+.input-box:focus {
+  border-color: rgb(100, 100, 100);
 }
