@@ -1,0 +1,27 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 98vh;
+  background: none;
+}
+
+.dev {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  font-size: 1.2em;
+  font-weight: bolder;
+}

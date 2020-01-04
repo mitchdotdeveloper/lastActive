@@ -22,7 +22,6 @@ func getPath(p string) (head, tail string) {
 }
 
 func main() {
-	// http.Handle("/", http.FileServer(http.Dir("../public")))
 	http.HandleFunc("/latest", func(w http.ResponseWriter, r *http.Request) {
 		 w.Header().Set("Access-Control-Allow-Origin", "*")
     if (r.Method == "OPTIONS") {

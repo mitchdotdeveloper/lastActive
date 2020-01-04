@@ -1,22 +1,23 @@
-html {
-  font-size: 10px;
-}
-
 body {
-  margin: 0;
-  overflow: hidden;
   background: #ef32d9;
   background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
   background: linear-gradient(to right, #89fffd, #ef32d9);
 }
 
-.container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-  background: none;
+.title, .company {
+  font-size: 6rem;
+}
+
+.title {
+  color: white;
+}
+
+.company {
+  color: rgb(43, 43, 43);
+}
+
+.input-form {
+  text-align: center;
 }
 
 .input-box, .submit-btn {
@@ -37,5 +38,9 @@ body {
 }
 
 .input-box:focus {
+  border-color: rgb(100, 100, 100);
+}
+
+.submit-btn:active {
   border-color: rgb(100, 100, 100);
 }

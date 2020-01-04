@@ -22,18 +22,32 @@ export default class App extends React.Component {
     e.preventDefault();
     fetch(`http://localhost:8080/latest?username=${this.state.username}`)
       .then(res => res.text())
-      .then(time => this.setState({timeSinceLastActive: time}))
+      .then(time => this.setState({timeSinceLastActive: time, username: ''}))
       .catch(err => console.error(err));
+
   }
 
   render () {
     return (
-      this.state.timeSinceLastActive
-        ? <h1>{this.state.timeSinceLastActive}</h1>
-        : <form className="input-form" onSubmit={this.getTime}>
-            <input className="input-box" type="text" name="username" placeholder="GitHub Username" value={this.state.username} onChange={this.handleInputChange} required/>
-            <input className="submit-btn" type="submit" value="Search"/>
-          </form>
-    );
+      <div className="container">
+        <h1 className="title">
+          LastActive:<b className="company">GitHub</b>
+        </h1>
+        <form className="input-form" onSubmit={this.getTime}>
+          <input className="input-box"
+            type="text"
+            name="username"
+            placeholder="GitHub Username"
+            value={this.state.username}
+            onChange={this.handleInputChange}
+            required />
+          <input className="submit-btn" type="submit" value="Search" />
+        </form>
+        {this.state.timeSinceLastActive
+          ? <h1>{this.state.timeSinceLastActive}</h1>
+          : null
+        }
+      </div>)
+    ;
   }
 }
