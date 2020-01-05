@@ -4,10 +4,10 @@ html {
 
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 .container {
+  overflow-x: hidden;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

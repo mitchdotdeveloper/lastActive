@@ -44,3 +44,32 @@ body {
 .submit-btn:active {
   border-color: rgb(100, 100, 100);
 }
+
+.time {
+  font-size: 3rem;
+  transition: all 0.3s linear;
+}
+
+.hide {
+  font-size: 0;
+}
+
+@media screen and (max-width: 520px) {
+  .title, .company {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .title, .company {
+    font-size: 3rem;
+  }
+
+  .input-box, .submit-btn {
+    font-size: 1.8rem;
+  }
+
+  .time {
+    font-size: 2rem;
+  }
+}

@@ -28,6 +28,11 @@ export default class App extends React.Component {
   }
 
   render () {
+    if ( this.state.timeSinceLastActive ) {
+      setTimeout( () => {
+        document.querySelector('.time').classList.remove('hide');
+      }, 750);
+    }
     return (
       <div className="container">
         <h1 className="title">
@@ -44,7 +49,7 @@ export default class App extends React.Component {
           <input className="submit-btn" type="submit" value="Search" />
         </form>
         {this.state.timeSinceLastActive
-          ? <h1>{this.state.timeSinceLastActive}</h1>
+          ? <h1 className="time hide">{this.state.timeSinceLastActive}</h1>
           : null
         }
       </div>)
