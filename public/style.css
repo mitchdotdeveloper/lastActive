@@ -3,11 +3,15 @@ html {
 }
 
 body {
+  height: 100vh;
   margin: 0;
-  overflow: hidden;
+  background: #bdc3c7;
+  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
 }
 
 .container {
+  overflow-x: hidden;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

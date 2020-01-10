@@ -1,9 +1,3 @@
-body {
-  background: #ef32d9;
-  background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
-  background: linear-gradient(to right, #89fffd, #ef32d9);
-}
-
 .title, .company {
   font-size: 6rem;
 }
@@ -13,7 +7,7 @@ body {
 }
 
 .company {
-  color: rgb(43, 43, 43);
+  color: black;
 }
 
 .input-form {
@@ -43,4 +37,54 @@ body {
 
 .submit-btn:active {
   border-color: rgb(100, 100, 100);
+}
+
+.time {
+  font-size: 3rem;
+  transition: all 0.3s linear;
+}
+
+.hide {
+  font-size: 0;
+}
+
+.loader {
+  position: fixed;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  width: 0;
+  height: 0;
+}
+
+.loader-active {
+  border-top: 12px double black;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 520px) {
+  .title, .company {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .title, .company {
+    font-size: 3rem;
+  }
+
+  .input-box, .submit-btn {
+    font-size: 1.8rem;
+  }
+
+  .time {
+    font-size: 2rem;
+  }
 }
