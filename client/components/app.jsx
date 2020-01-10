@@ -10,6 +10,7 @@ export default class App extends React.Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.getTime = this.getTime.bind(this);
+    this.server = '';
   }
 
   handleInputChange ({ target: { name, value } }) {
@@ -21,7 +22,7 @@ export default class App extends React.Component {
   getTime (e) {
     e.preventDefault();
     document.querySelector('.loader').classList.add('loader-active');
-    fetch(`http://localhost:8080/latest?username=${this.state.username}`)
+    fetch(`${this.server}?username=${this.state.username}`)
       .then(res => res.text())
       .then(time => this.setState({timeSinceLastActive: time, username: ''}))
       .catch(err => console.error(err));
